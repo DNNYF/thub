@@ -2,10 +2,28 @@
 
 A new Flutter project.
 
+## Anggota Kelompok 6
+
+- Denny Firmansyah Suwardi  (2203067)
+- Indra Setiawan 				    (2203074)
+- Mochamad Rizky Maulana    (2203077)
+
 ## Getting Started
+Install git [disini](https://git-scm.com/). 
 
+Lakukan Clone repositori menggunakan git atau terminal di folder yang diinginkan :
+```bash
+git clone https://github.com/DNNYF/vint.git
 
+```
 
+Masuk Ke folder vint lalu unduh dan upgrade package dependensi
+```bash
+flutter pub get
+flutter pub upgrade
+```
+
+setelah selesai mengunduh depedensi yang di perlukan. anda bisa langsung menjalankan project
 
 
 ## Credit
