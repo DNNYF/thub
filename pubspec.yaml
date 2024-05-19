@@ -67,6 +67,10 @@ flutter:
     - image/5.png
     - image/6.png
     - image/valorant_points.png
+    - image/img1.png
+    - image/img2.png
+    - image/img3.png
+    - image/img4.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see
