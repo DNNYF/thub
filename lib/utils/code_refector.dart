@@ -1,4 +1,4 @@
-import 'package:login_signup/utils/exports.dart';
+import 'package:vint/utils/exports.dart';
 
 // custom text widget
 Widget customText({required String txt, required TextStyle style}) {

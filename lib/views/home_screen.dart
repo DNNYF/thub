@@ -1,4 +1,4 @@
-import 'package:login_signup/utils/exports.dart';
+import 'package:vint/utils/exports.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
