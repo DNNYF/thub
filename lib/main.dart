@@ -1,21 +1,23 @@
 import 'package:vint/utils/exports.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        title: 'Flutter Demo',
-        theme: ThemeData(
-          primarySwatch: Colors.blue,
-        ),
-        home: const HomeScreen());
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        scaffoldBackgroundColor: Colors.white,
+      ),
+      routes: {
+        "/" : (context) => HomePage(),
+        "cartPage" :(context) => CartPage(),
+      },
+    );
   }
-}
+}   
