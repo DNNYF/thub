@@ -1,7 +1,5 @@
 import 'package:vint/utils/exports.dart';
 
-
-
 void main() {
   runApp(const MyApp());
 }
