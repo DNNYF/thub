@@ -7,7 +7,7 @@ class CartBottomNavBar extends StatelessWidget {
       child: Container(
         color: Colors.white,
         padding: EdgeInsets.symmetric(horizontal: 20),
-        height: 150,
+        height: 500,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -34,7 +34,7 @@ class CartBottomNavBar extends StatelessWidget {
             ),
             Container(
               alignment: Alignment.center,
-              height: 50,
+              height: 10,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Colors.blue,

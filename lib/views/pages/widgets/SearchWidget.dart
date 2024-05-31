@@ -1,4 +1,4 @@
-import 'package:vint/utils/exports.dart';
+import 'package:flutter/material.dart';
 
 class SearchWidget extends StatelessWidget {
   @override
@@ -21,17 +21,41 @@ class SearchWidget extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: TextFormField(
-              decoration: InputDecoration(
-                border: InputBorder.none,
-                hintText: "Search here...",
+            child: ElevatedButton(
+              onPressed: () {
+                Navigator.pushNamed(context, 'Searchbar');
+              },
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Text(
+                      'Search here...',
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: Colors.grey[600],
+                        fontWeight: FontWeight.w500,
+                      ),
+                    ),
+                  ),
+                  Icon(
+                    Icons.camera_alt,
+                    size: 27,
+                    color: Colors.black,
+                  ),
+                ],
+              ),
+              style: ElevatedButton.styleFrom(
+                padding: EdgeInsets.zero,
+                minimumSize: Size(double.infinity, 50),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                elevation: 0,
+                tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                shadowColor: Colors.transparent,
+                side: BorderSide.none,
               ),
             ),
-          ),
-          Icon(
-            Icons.camera_alt,
-            size: 27,
-            color: Colors.black,
           ),
         ],
       ),

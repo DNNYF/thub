@@ -17,6 +17,7 @@ export 'package:vint/views/home_screen.dart';
 export 'package:vint/views/login_signup/login_screen.dart';
 export 'package:vint/views/login_signup/signup_sreen.dart';
 export 'package:vint/views/welcome_Screen.dart';
+export 'package:vint/views/SearchBar/searchbar.dart';
 
 //Controllers
 
