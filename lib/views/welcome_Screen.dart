@@ -17,7 +17,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
             padding: const EdgeInsets.only(top: 44),
             child: Column(
               children: [
-                const Image(image: AssetImage("image/img2.png")),
+                const Image(image: AssetImage("images/img4.png")),
                 const SizedBox(height: 48),
                 customText(
                     txt: "Thank You",
@@ -53,7 +53,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
 //
 //   Column(
 //     children: <Widget>[
-//       const Image(image: AssetImage("image/img4.png")),
+//       const Image(image: AssetImage("images/img4.png")),
 //       customText(
 //           txt: "Thank you",
 //           style: const TextStyle(

@@ -41,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     const SizedBox(
                       height: 30,
                     ),
-                    Image.asset("image/img1.png"),
+                    Image.asset("images/img1.png"),
                     const SizedBox(
                       height: 50,
                     ),
@@ -55,16 +55,17 @@ class _HomeScreenState extends State<HomeScreen> {
                       height: 30,
                     ),
                     Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         InkWell(
                           child: InkwellButtons(
-                              image: Image.asset("image/img3.png")),
+                              image: Image.asset("images/img3.png")),
                           onTap: () {},
                         ),
                         const SizedBox(width: 20),
                         InkWell(
                           child: InkwellButtons(
-                              image: Image.asset("image/img4.png")),
+                              image: Image.asset("images/img4.png")),
                           onTap: () {},
                         ),
                       ],

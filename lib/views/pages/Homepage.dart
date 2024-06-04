@@ -1,7 +1,9 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:vint/main.dart';
 import 'package:vint/utils/exports.dart';
 import 'package:flutter/material.dart';
+import 'package:vint/views/myacc/myaccount.dart';
 import 'package:vint/views/pages/widgets/CategoriesWidget.dart';
 import 'package:vint/views/pages/widgets/HomeAppBar.dart';
 import 'package:vint/views/pages/widgets/ImageCarousel.dart';
@@ -74,15 +76,15 @@ class HomePage extends StatelessWidget {
                 Container(
                   alignment: Alignment.centerLeft,
                   margin: EdgeInsets.symmetric(
-                  vertical: 20,
-                  horizontal: 10,
+                    vertical: 20,
+                    horizontal: 10,
                   ),
                   child: Text(
                     "Toko Populer",
                     style: TextStyle(
-                    fontSize: 25,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.black,
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
                     ),
                   ),
                 ),
@@ -117,20 +119,29 @@ class HomePage extends StatelessWidget {
         height: 70,
         color: Colors.lightBlue,
         items: [
-          Icon(
-            Icons.home,
-            size: 30,
+          IconButton(
+            icon: Icon(Icons.home),
+            iconSize: 30,
             color: Colors.black,
+            onPressed: () {},
           ),
-          Icon(
-            CupertinoIcons.cart_fill,
-            size: 30,
+          IconButton(
+            icon: Icon(CupertinoIcons.cart_fill),
+            iconSize: 30,
             color: Colors.black,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => HomeScreen()));
+            },
           ),
-          Icon(
-            Icons.person,
-            size: 30,
+          IconButton(
+            icon: Icon(Icons.person),
+            iconSize: 30,
             color: Colors.black,
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Myaccount()));
+            },
           ),
         ],
       ),
