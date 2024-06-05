@@ -38,9 +38,9 @@ class SearchWidget extends StatelessWidget {
                     ),
                   ),
                   Icon(
-                    Icons.camera_alt,
-                    size: 27,
-                    color: Colors.black,
+                    Icons.search,
+                    color: Colors.grey[600],
+                    size: 20,
                   ),
                 ],
               ),
