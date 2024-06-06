@@ -10,6 +10,7 @@ import 'package:vint/views/pages/widgets/ImageCarousel.dart';
 import 'package:vint/views/pages/widgets/ItemsWidget.dart';
 import 'package:vint/views/pages/widgets/PopularCategoryWidget.dart';
 import 'package:vint/views/pages/widgets/PopularStoreWidget.dart';
+import 'package:vint/views/pages/widgets/navigationBarApp.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -113,6 +114,7 @@ class HomePage extends StatelessWidget {
           ),
         ],
       ),
+      // bottomNavigationBar: NavigationBarApp(),
       bottomNavigationBar: CurvedNavigationBar(
         backgroundColor: Colors.transparent,
         onTap: (index) {},

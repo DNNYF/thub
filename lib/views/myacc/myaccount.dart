@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:vint/utils/exports.dart";
 import 'package:flutter_svg/flutter_svg.dart';
+import "package:vint/views/shopPage/shopPage.dart";
 
 class Myaccount extends StatelessWidget {
   const Myaccount({super.key});
@@ -20,7 +21,6 @@ class Myaccount extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            // Profile Section
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Row(
@@ -44,16 +44,15 @@ class Myaccount extends StatelessWidget {
               ),
             ),
             Divider(),
-            // Tokoku Section
             ListTile(
               title: Text('Tokoku'),
               trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
-                // Navigate to My Shop or Create Shop page
+                Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => MyShopPage()));
               },
             ),
             Divider(),
-            // Riwayat Aktivitas Section
             GridView.count(
               shrinkWrap: true,
               crossAxisCount: 4,
@@ -72,33 +71,32 @@ class Myaccount extends StatelessWidget {
               ],
             ),
             Divider(),
-            // Favorit Section
             ListTile(
               title: Text('Favorit'),
               trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
-                // Navigate to Favorite Products page
+                // arahkan ke Favorite 
               },
             ),
             Divider(),
-            // Kategori Bantuan/Customer Service Section
             ListTile(
               title: Text('Kendala Pesanan'),
               trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
-                // Navigate to Order Issues page
+                // Arahkan ke kendala pesanan
               },
             ),
             ListTile(
               title: Text('Daftar Komplain'),
               trailing: Icon(Icons.arrow_forward_ios),
               onTap: () {
-                // Navigate to Complaint List page
+                // Arahkan Ke daftar komplen
               },
             ),
           ],
         ),
       ),
+      
     );
   }
 }
