@@ -1,4 +1,5 @@
-import 'package:vint/utils/exports.dart';
+import 'package:flutter/material.dart';
+import 'package:vint/views/pages/product_detail_page.dart';
 
 class ItemsWidget extends StatelessWidget {
   // Daftar gambar yang tersedia
@@ -20,7 +21,7 @@ class ItemsWidget extends StatelessWidget {
       crossAxisCount: 2,
       shrinkWrap: true,
       children: [
-        for (String imagePath in imageList)
+        for (int i = 0; i < imageList.length; i++)
           Container(
             padding: EdgeInsets.only(left: 15, right: 15, top: 15),
             margin: EdgeInsets.symmetric(vertical: 2, horizontal: 10),
@@ -55,10 +56,42 @@ class ItemsWidget extends StatelessWidget {
                   ],
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => ProductDetailPage(
+                          imageUrl: imageList[i],
+                          productName: "Valorant Points",
+                          productPrice: 100000,
+                          productDescription: """
+Cara Redeem Code Valorant
+
+Fresh Code
+Limited Stock!!
+Redeem Code (Code Langsung dikirim Setelah Pembayaran)
+100% Legal
+
+Cara Aktivasi KODE:
+1. Pastikan akun Riot kamu berasal dari Region Indonesia
+2. Login ke Valorant
+3. Klik Tombol VP di sudut kanan atas.
+4. Pilih tombol "Riot PIN and Codes"
+5. di bagian pilihan pembayaran "Select Purchase Method"
+6. Masukkan kode Riot PIN yang sudah di beli dan klik "Submit".
+                          """,
+                          storeName: "Vint Store",
+                          storeLogoUrl: "images/vint.png", // Path to the store logo
+                          storeRating: 4.9,
+                          storeLastActive: "5 Jam",
+                          reviews: ["Review 1", "Review 2", "Review 3"],
+                        ),
+                      ),
+                    );
+                  },
                   child: Container(
                     child: Image.asset(
-                      imagePath,
+                      imageList[i],
                       height: 120,
                       width: 200,
                     ),
@@ -92,7 +125,7 @@ class ItemsWidget extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
-                        "\Rp.100.000",
+                        "Rp.100.000",
                         style: TextStyle(
                           fontSize: 16,
                           fontWeight: FontWeight.bold,
