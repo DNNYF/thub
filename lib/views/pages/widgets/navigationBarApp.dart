@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:cupertino_icons/cupertino_icons.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+
 class NavigationBarApp extends StatelessWidget {
   const NavigationBarApp({super.key});
 

@@ -68,20 +68,21 @@ class ItemsWidget extends StatelessWidget {
 Cara Redeem Code Valorant
 
 Fresh Code
-Limited Stock!!
-Redeem Code (Code Langsung dikirim Setelah Pembayaran)
-100% Legal
+Limited Stock!! 100% Legal
 
 Cara Aktivasi KODE:
 1. Pastikan akun Riot kamu berasal dari Region Indonesia
-2. Login ke Valorant
-3. Klik Tombol VP di sudut kanan atas.
-4. Pilih tombol "Riot PIN and Codes"
-5. di bagian pilihan pembayaran "Select Purchase Method"
-6. Masukkan kode Riot PIN yang sudah di beli dan klik "Submit".
+2. Masukan ID Valoran mu. contoh : Vint#1234
+3. Tunggu 5-10 menit untuk pengisian point
+4. Selesai 
+
+Note :
+- Toko tidak bertanggung jawab mengenai kesalahan Input ID
+- Bila ID tidak ditemukan , admin akan melakukan penundaan pengiriman
                           """,
                           storeName: "Vint Store",
-                          storeLogoUrl: "images/vint.png", // Path to the store logo
+                          storeLogoUrl:
+                              "images/vint.png", // Path to the store logo
                           storeRating: 4.9,
                           storeLastActive: "5 Jam",
                           reviews: ["Review 1", "Review 2", "Review 3"],

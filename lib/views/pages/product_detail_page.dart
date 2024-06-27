@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ProductDetailPage extends StatefulWidget {
   final String imageUrl;
@@ -58,7 +59,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Center(
-                    child: Image.asset(widget.imageUrl, height: 300, width: 400),
+                    child:
+                        Image.asset(widget.imageUrl, height: 300, width: 400),
                   ),
                   SizedBox(height: 16),
                   Text(
@@ -68,7 +70,10 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   SizedBox(height: 8),
                   Text(
                     'Rp ${widget.productPrice}',
-                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold, color: Colors.red),
+                    style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.red),
                   ),
                   SizedBox(height: 16),
                   Text(
@@ -77,14 +82,18 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    isExpanded ? widget.productDescription : shortenDescription(widget.productDescription),
+                    isExpanded
+                        ? widget.productDescription
+                        : shortenDescription(widget.productDescription),
                     style: TextStyle(fontSize: 16),
                   ),
                   SizedBox(height: 8),
                   GestureDetector(
                     onTap: _toggleDescriptionExpansion,
                     child: Text(
-                      isExpanded ? 'Tampilkan lebih sedikit' : 'Tampilkan lebih banyak',
+                      isExpanded
+                          ? 'Tampilkan lebih sedikit'
+                          : 'Tampilkan lebih banyak',
                       style: TextStyle(color: Colors.blue),
                     ),
                   ),
@@ -107,7 +116,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                                 style: TextStyle(fontWeight: FontWeight.bold),
                               ),
                               SizedBox(width: 4),
-                              Icon(Icons.verified, size: 16, color: Colors.grey),
+                              Icon(Icons.verified,
+                                  size: 16, color: Colors.grey),
                               SizedBox(width: 4),
                               Icon(Icons.star, size: 16, color: Colors.amber),
                               Text(
@@ -128,7 +138,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                           // Add logic to open store link
                         },
                         child: Text('Kunjungi Toko'),
-                        style: TextButton.styleFrom(backgroundColor: Colors.blue),
+                        style:
+                            TextButton.styleFrom(backgroundColor: Colors.blue),
                       ),
                     ],
                   ),
@@ -139,7 +150,8 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                   ),
                   SizedBox(height: 8),
                   ...widget.reviews.map((review) => buildReviewCard(review)),
-                  SizedBox(height: 60), // Spacing to ensure content above buttons
+                  SizedBox(
+                      height: 60), // Spacing to ensure content above buttons
                 ],
               ),
             ),
@@ -235,10 +247,7 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      // Place order logic
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(content: Text('Order Placed')),
-                      );
+                      _launchMidtransPayment();
                       Navigator.pop(context);
                     },
                     style: ElevatedButton.styleFrom(
@@ -254,6 +263,16 @@ class _ProductDetailPageState extends State<ProductDetailPage> {
       },
     );
   }
+
+  void _launchMidtransPayment() async {
+    const midtransPaymentUrl =
+        'https://app.sandbox.midtrans.com/payment-links/1719506642436';
+    // ignore: deprecated_member_use
+    if (await canLaunch(midtransPaymentUrl)) {
+      // ignore: deprecated_member_use
+      await launch(midtransPaymentUrl);
+    } else {
+      throw 'Could not launch $midtransPaymentUrl';
+    }
+  }
 }
-
-

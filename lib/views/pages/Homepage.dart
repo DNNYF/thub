@@ -1,6 +1,5 @@
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:vint/main.dart';
 import 'package:vint/utils/exports.dart';
 import 'package:flutter/material.dart';
 import 'package:vint/views/myacc/myaccount.dart';
@@ -10,7 +9,6 @@ import 'package:vint/views/pages/widgets/ImageCarousel.dart';
 import 'package:vint/views/pages/widgets/ItemsWidget.dart';
 import 'package:vint/views/pages/widgets/PopularCategoryWidget.dart';
 import 'package:vint/views/pages/widgets/PopularStoreWidget.dart';
-import 'package:vint/views/pages/widgets/navigationBarApp.dart';
 
 class HomePage extends StatelessWidget {
   @override
